@@ -15,7 +15,7 @@ using System.Drawing.Printing;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 
-namespace GarmentsManagementSystem
+namespace LogiHR
 {
     public partial class FormAdmin : MaterialForm
     {
@@ -802,7 +802,10 @@ namespace GarmentsManagementSystem
             countFinished++;
         }
 
-       
+        private void btnSendEmail_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
 
-namespace GarmentsManagementSystem
+namespace LogiHR
 {
     public partial class FormLogin : MaterialForm
     {

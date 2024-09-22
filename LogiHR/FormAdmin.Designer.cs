@@ -1,4 +1,4 @@
-﻿namespace GarmentsManagementSystem
+﻿namespace LogiHR
 {
     partial class FormAdmin
     {
@@ -69,6 +69,7 @@
             this.pnlAdminRawMaterial = new System.Windows.Forms.Panel();
             this.txtSearchRawMaterial = new MaterialSkin.Controls.MaterialTextBox2();
             this.pnlRawMaterialInput = new System.Windows.Forms.Panel();
+            this.btnSendEmail = new MaterialSkin.Controls.MaterialButton();
             this.btnPrintRawMaterialInvoice = new MaterialSkin.Controls.MaterialButton();
             this.btnDeleteRawMaterial = new MaterialSkin.Controls.MaterialButton();
             this.txtRawMaterialsId = new MaterialSkin.Controls.MaterialTextBox2();
@@ -172,9 +173,10 @@
             this.FinishedProduct.Controls.Add(this.pnlFinishedProductData);
             this.FinishedProduct.Controls.Add(this.pnlFinishedProductShow);
             this.FinishedProduct.ImageKey = "finished product.png";
-            this.FinishedProduct.Location = new System.Drawing.Point(4, 58);
+            this.FinishedProduct.Location = new System.Drawing.Point(4, 53);
+            this.FinishedProduct.Margin = new System.Windows.Forms.Padding(2);
             this.FinishedProduct.Name = "FinishedProduct";
-            this.FinishedProduct.Size = new System.Drawing.Size(1463, 771);
+            this.FinishedProduct.Size = new System.Drawing.Size(1096, 620);
             this.FinishedProduct.TabIndex = 2;
             this.FinishedProduct.Text = "Finished Product";
             // 
@@ -183,9 +185,10 @@
             this.pnlFinishedProductData.Controls.Add(this.dgvFinishedProductShow);
             this.pnlFinishedProductData.Controls.Add(this.txtFinishedProductSearch);
             this.pnlFinishedProductData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlFinishedProductData.Location = new System.Drawing.Point(420, 0);
+            this.pnlFinishedProductData.Location = new System.Drawing.Point(315, 0);
+            this.pnlFinishedProductData.Margin = new System.Windows.Forms.Padding(2);
             this.pnlFinishedProductData.Name = "pnlFinishedProductData";
-            this.pnlFinishedProductData.Size = new System.Drawing.Size(1043, 771);
+            this.pnlFinishedProductData.Size = new System.Drawing.Size(781, 620);
             this.pnlFinishedProductData.TabIndex = 1;
             // 
             // dgvFinishedProductShow
@@ -203,13 +206,14 @@
             this.ManufacturedDate});
             this.dgvFinishedProductShow.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvFinishedProductShow.GridColor = System.Drawing.Color.DimGray;
-            this.dgvFinishedProductShow.Location = new System.Drawing.Point(0, 43);
+            this.dgvFinishedProductShow.Location = new System.Drawing.Point(0, 28);
+            this.dgvFinishedProductShow.Margin = new System.Windows.Forms.Padding(2);
             this.dgvFinishedProductShow.Name = "dgvFinishedProductShow";
             this.dgvFinishedProductShow.ReadOnly = true;
             this.dgvFinishedProductShow.RowHeadersWidth = 51;
             this.dgvFinishedProductShow.RowTemplate.Height = 24;
             this.dgvFinishedProductShow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFinishedProductShow.Size = new System.Drawing.Size(1043, 728);
+            this.dgvFinishedProductShow.Size = new System.Drawing.Size(781, 592);
             this.dgvFinishedProductShow.TabIndex = 18;
             this.dgvFinishedProductShow.DoubleClick += new System.EventHandler(this.dgvFinishedProductShow_DoubleClick_1);
             // 
@@ -274,11 +278,12 @@
             this.txtFinishedProductSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtFinishedProductSearch.Depth = 0;
             this.txtFinishedProductSearch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtFinishedProductSearch.Font = new System.Drawing.Font("Oswald", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFinishedProductSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFinishedProductSearch.HideSelection = true;
             this.txtFinishedProductSearch.Hint = "Search Finished Product by category name";
             this.txtFinishedProductSearch.LeadingIcon = ((System.Drawing.Image)(resources.GetObject("txtFinishedProductSearch.LeadingIcon")));
             this.txtFinishedProductSearch.Location = new System.Drawing.Point(0, 0);
+            this.txtFinishedProductSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtFinishedProductSearch.MaxLength = 32767;
             this.txtFinishedProductSearch.MouseState = MaterialSkin.MouseState.OUT;
             this.txtFinishedProductSearch.Name = "txtFinishedProductSearch";
@@ -290,7 +295,7 @@
             this.txtFinishedProductSearch.SelectionLength = 0;
             this.txtFinishedProductSearch.SelectionStart = 0;
             this.txtFinishedProductSearch.ShortcutsEnabled = true;
-            this.txtFinishedProductSearch.Size = new System.Drawing.Size(1043, 48);
+            this.txtFinishedProductSearch.Size = new System.Drawing.Size(781, 48);
             this.txtFinishedProductSearch.TabIndex = 17;
             this.txtFinishedProductSearch.TabStop = false;
             this.txtFinishedProductSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -313,10 +318,11 @@
             this.pnlFinishedProductShow.Controls.Add(this.cmbFinishedProductCategoryInput);
             this.pnlFinishedProductShow.Controls.Add(this.lblFinishedTitle);
             this.pnlFinishedProductShow.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlFinishedProductShow.Font = new System.Drawing.Font("Oswald", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlFinishedProductShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlFinishedProductShow.Location = new System.Drawing.Point(0, 0);
+            this.pnlFinishedProductShow.Margin = new System.Windows.Forms.Padding(2);
             this.pnlFinishedProductShow.Name = "pnlFinishedProductShow";
-            this.pnlFinishedProductShow.Size = new System.Drawing.Size(420, 771);
+            this.pnlFinishedProductShow.Size = new System.Drawing.Size(315, 620);
             this.pnlFinishedProductShow.TabIndex = 0;
             // 
             // btnPrintFinishedProduct
@@ -327,12 +333,12 @@
             this.btnPrintFinishedProduct.Depth = 0;
             this.btnPrintFinishedProduct.HighEmphasis = true;
             this.btnPrintFinishedProduct.Icon = null;
-            this.btnPrintFinishedProduct.Location = new System.Drawing.Point(261, 518);
-            this.btnPrintFinishedProduct.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnPrintFinishedProduct.Location = new System.Drawing.Point(196, 421);
+            this.btnPrintFinishedProduct.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnPrintFinishedProduct.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnPrintFinishedProduct.Name = "btnPrintFinishedProduct";
             this.btnPrintFinishedProduct.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnPrintFinishedProduct.Size = new System.Drawing.Size(75, 36);
+            this.btnPrintFinishedProduct.Size = new System.Drawing.Size(56, 29);
             this.btnPrintFinishedProduct.TabIndex = 46;
             this.btnPrintFinishedProduct.Text = "PRINT";
             this.btnPrintFinishedProduct.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -348,12 +354,12 @@
             this.btnFinishedProductDelete.Depth = 0;
             this.btnFinishedProductDelete.HighEmphasis = true;
             this.btnFinishedProductDelete.Icon = null;
-            this.btnFinishedProductDelete.Location = new System.Drawing.Point(153, 518);
-            this.btnFinishedProductDelete.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnFinishedProductDelete.Location = new System.Drawing.Point(115, 421);
+            this.btnFinishedProductDelete.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnFinishedProductDelete.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnFinishedProductDelete.Name = "btnFinishedProductDelete";
             this.btnFinishedProductDelete.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnFinishedProductDelete.Size = new System.Drawing.Size(84, 36);
+            this.btnFinishedProductDelete.Size = new System.Drawing.Size(63, 29);
             this.btnFinishedProductDelete.TabIndex = 45;
             this.btnFinishedProductDelete.Text = "DELETE";
             this.btnFinishedProductDelete.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -369,12 +375,12 @@
             this.btnFinishedProductSave.Depth = 0;
             this.btnFinishedProductSave.HighEmphasis = true;
             this.btnFinishedProductSave.Icon = null;
-            this.btnFinishedProductSave.Location = new System.Drawing.Point(58, 518);
-            this.btnFinishedProductSave.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnFinishedProductSave.Location = new System.Drawing.Point(44, 421);
+            this.btnFinishedProductSave.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnFinishedProductSave.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnFinishedProductSave.Name = "btnFinishedProductSave";
             this.btnFinishedProductSave.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnFinishedProductSave.Size = new System.Drawing.Size(75, 36);
+            this.btnFinishedProductSave.Size = new System.Drawing.Size(56, 29);
             this.btnFinishedProductSave.TabIndex = 44;
             this.btnFinishedProductSave.Text = "SAVE";
             this.btnFinishedProductSave.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -385,9 +391,10 @@
             // lblManufacturedDate
             // 
             this.lblManufacturedDate.AutoSize = true;
-            this.lblManufacturedDate.Location = new System.Drawing.Point(52, 471);
+            this.lblManufacturedDate.Location = new System.Drawing.Point(39, 383);
+            this.lblManufacturedDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblManufacturedDate.Name = "lblManufacturedDate";
-            this.lblManufacturedDate.Size = new System.Drawing.Size(128, 29);
+            this.lblManufacturedDate.Size = new System.Drawing.Size(129, 17);
             this.lblManufacturedDate.TabIndex = 39;
             this.lblManufacturedDate.Text = "Manufactured Date";
             // 
@@ -395,9 +402,10 @@
             // 
             this.dtpManufacturedDateInput.CustomFormat = "dd/MM/yyyy";
             this.dtpManufacturedDateInput.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpManufacturedDateInput.Location = new System.Drawing.Point(229, 471);
+            this.dtpManufacturedDateInput.Location = new System.Drawing.Point(172, 383);
+            this.dtpManufacturedDateInput.Margin = new System.Windows.Forms.Padding(2);
             this.dtpManufacturedDateInput.Name = "dtpManufacturedDateInput";
-            this.dtpManufacturedDateInput.Size = new System.Drawing.Size(167, 33);
+            this.dtpManufacturedDateInput.Size = new System.Drawing.Size(126, 23);
             this.dtpManufacturedDateInput.TabIndex = 40;
             // 
             // txtFinishedProductId
@@ -407,11 +415,12 @@
             this.txtFinishedProductId.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtFinishedProductId.Depth = 0;
             this.txtFinishedProductId.Enabled = false;
-            this.txtFinishedProductId.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtFinishedProductId.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtFinishedProductId.HideSelection = true;
             this.txtFinishedProductId.Hint = "Automated Product Id";
             this.txtFinishedProductId.LeadingIcon = null;
-            this.txtFinishedProductId.Location = new System.Drawing.Point(58, 110);
+            this.txtFinishedProductId.Location = new System.Drawing.Point(44, 89);
+            this.txtFinishedProductId.Margin = new System.Windows.Forms.Padding(2);
             this.txtFinishedProductId.MaxLength = 32767;
             this.txtFinishedProductId.MouseState = MaterialSkin.MouseState.OUT;
             this.txtFinishedProductId.Name = "txtFinishedProductId";
@@ -423,7 +432,7 @@
             this.txtFinishedProductId.SelectionLength = 0;
             this.txtFinishedProductId.SelectionStart = 0;
             this.txtFinishedProductId.ShortcutsEnabled = true;
-            this.txtFinishedProductId.Size = new System.Drawing.Size(179, 48);
+            this.txtFinishedProductId.Size = new System.Drawing.Size(134, 48);
             this.txtFinishedProductId.TabIndex = 38;
             this.txtFinishedProductId.TabStop = false;
             this.txtFinishedProductId.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -436,11 +445,12 @@
             this.txtFinishedProductCostInput.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txtFinishedProductCostInput.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtFinishedProductCostInput.Depth = 0;
-            this.txtFinishedProductCostInput.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtFinishedProductCostInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtFinishedProductCostInput.HideSelection = true;
             this.txtFinishedProductCostInput.Hint = "Total Cost";
             this.txtFinishedProductCostInput.LeadingIcon = null;
-            this.txtFinishedProductCostInput.Location = new System.Drawing.Point(58, 397);
+            this.txtFinishedProductCostInput.Location = new System.Drawing.Point(44, 323);
+            this.txtFinishedProductCostInput.Margin = new System.Windows.Forms.Padding(2);
             this.txtFinishedProductCostInput.MaxLength = 32767;
             this.txtFinishedProductCostInput.MouseState = MaterialSkin.MouseState.OUT;
             this.txtFinishedProductCostInput.Name = "txtFinishedProductCostInput";
@@ -452,7 +462,7 @@
             this.txtFinishedProductCostInput.SelectionLength = 0;
             this.txtFinishedProductCostInput.SelectionStart = 0;
             this.txtFinishedProductCostInput.ShortcutsEnabled = true;
-            this.txtFinishedProductCostInput.Size = new System.Drawing.Size(179, 48);
+            this.txtFinishedProductCostInput.Size = new System.Drawing.Size(134, 48);
             this.txtFinishedProductCostInput.TabIndex = 36;
             this.txtFinishedProductCostInput.TabStop = false;
             this.txtFinishedProductCostInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -465,11 +475,12 @@
             this.txtFinishedProductQuantityInput.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txtFinishedProductQuantityInput.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtFinishedProductQuantityInput.Depth = 0;
-            this.txtFinishedProductQuantityInput.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtFinishedProductQuantityInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtFinishedProductQuantityInput.HideSelection = true;
             this.txtFinishedProductQuantityInput.Hint = "Enter quantity";
             this.txtFinishedProductQuantityInput.LeadingIcon = null;
-            this.txtFinishedProductQuantityInput.Location = new System.Drawing.Point(58, 323);
+            this.txtFinishedProductQuantityInput.Location = new System.Drawing.Point(44, 262);
+            this.txtFinishedProductQuantityInput.Margin = new System.Windows.Forms.Padding(2);
             this.txtFinishedProductQuantityInput.MaxLength = 32767;
             this.txtFinishedProductQuantityInput.MouseState = MaterialSkin.MouseState.OUT;
             this.txtFinishedProductQuantityInput.Name = "txtFinishedProductQuantityInput";
@@ -481,7 +492,7 @@
             this.txtFinishedProductQuantityInput.SelectionLength = 0;
             this.txtFinishedProductQuantityInput.SelectionStart = 0;
             this.txtFinishedProductQuantityInput.ShortcutsEnabled = true;
-            this.txtFinishedProductQuantityInput.Size = new System.Drawing.Size(179, 48);
+            this.txtFinishedProductQuantityInput.Size = new System.Drawing.Size(134, 48);
             this.txtFinishedProductQuantityInput.TabIndex = 35;
             this.txtFinishedProductQuantityInput.TabStop = false;
             this.txtFinishedProductQuantityInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -497,7 +508,7 @@
             this.cmbFinishedProductNameInput.DropDownHeight = 174;
             this.cmbFinishedProductNameInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFinishedProductNameInput.DropDownWidth = 121;
-            this.cmbFinishedProductNameInput.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cmbFinishedProductNameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cmbFinishedProductNameInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cmbFinishedProductNameInput.FormattingEnabled = true;
             this.cmbFinishedProductNameInput.Hint = "Choose Product";
@@ -505,11 +516,12 @@
             this.cmbFinishedProductNameInput.ItemHeight = 43;
             this.cmbFinishedProductNameInput.Items.AddRange(new object[] {
             "None"});
-            this.cmbFinishedProductNameInput.Location = new System.Drawing.Point(58, 255);
+            this.cmbFinishedProductNameInput.Location = new System.Drawing.Point(44, 207);
+            this.cmbFinishedProductNameInput.Margin = new System.Windows.Forms.Padding(2);
             this.cmbFinishedProductNameInput.MaxDropDownItems = 4;
             this.cmbFinishedProductNameInput.MouseState = MaterialSkin.MouseState.OUT;
             this.cmbFinishedProductNameInput.Name = "cmbFinishedProductNameInput";
-            this.cmbFinishedProductNameInput.Size = new System.Drawing.Size(179, 49);
+            this.cmbFinishedProductNameInput.Size = new System.Drawing.Size(135, 49);
             this.cmbFinishedProductNameInput.StartIndex = 0;
             this.cmbFinishedProductNameInput.TabIndex = 37;
             // 
@@ -522,7 +534,7 @@
             this.cmbFinishedProductCategoryInput.DropDownHeight = 432;
             this.cmbFinishedProductCategoryInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFinishedProductCategoryInput.DropDownWidth = 121;
-            this.cmbFinishedProductCategoryInput.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cmbFinishedProductCategoryInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cmbFinishedProductCategoryInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.cmbFinishedProductCategoryInput.FormattingEnabled = true;
             this.cmbFinishedProductCategoryInput.Hint = "Choose Category";
@@ -530,11 +542,12 @@
             this.cmbFinishedProductCategoryInput.ItemHeight = 43;
             this.cmbFinishedProductCategoryInput.Items.AddRange(new object[] {
             "None"});
-            this.cmbFinishedProductCategoryInput.Location = new System.Drawing.Point(58, 182);
+            this.cmbFinishedProductCategoryInput.Location = new System.Drawing.Point(44, 148);
+            this.cmbFinishedProductCategoryInput.Margin = new System.Windows.Forms.Padding(2);
             this.cmbFinishedProductCategoryInput.MaxDropDownItems = 10;
             this.cmbFinishedProductCategoryInput.MouseState = MaterialSkin.MouseState.OUT;
             this.cmbFinishedProductCategoryInput.Name = "cmbFinishedProductCategoryInput";
-            this.cmbFinishedProductCategoryInput.Size = new System.Drawing.Size(179, 49);
+            this.cmbFinishedProductCategoryInput.Size = new System.Drawing.Size(135, 49);
             this.cmbFinishedProductCategoryInput.StartIndex = 0;
             this.cmbFinishedProductCategoryInput.TabIndex = 34;
             this.cmbFinishedProductCategoryInput.SelectionChangeCommitted += new System.EventHandler(this.cmbFinishedProductCategoryInput_SelectionChangeCommitted_1);
@@ -542,10 +555,11 @@
             // lblFinishedTitle
             // 
             this.lblFinishedTitle.AutoSize = true;
-            this.lblFinishedTitle.Font = new System.Drawing.Font("Oswald", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFinishedTitle.Location = new System.Drawing.Point(124, 28);
+            this.lblFinishedTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFinishedTitle.Location = new System.Drawing.Point(93, 23);
+            this.lblFinishedTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFinishedTitle.Name = "lblFinishedTitle";
-            this.lblFinishedTitle.Size = new System.Drawing.Size(202, 39);
+            this.lblFinishedTitle.Size = new System.Drawing.Size(203, 24);
             this.lblFinishedTitle.TabIndex = 33;
             this.lblFinishedTitle.Text = "Enter Finished Product";
             // 
@@ -556,10 +570,11 @@
             this.RawMaterials.Controls.Add(this.pnlAdminRawMaterial);
             this.RawMaterials.Controls.Add(this.pnlRawMaterialInput);
             this.RawMaterials.ImageKey = "raw materials.png";
-            this.RawMaterials.Location = new System.Drawing.Point(4, 58);
+            this.RawMaterials.Location = new System.Drawing.Point(4, 53);
+            this.RawMaterials.Margin = new System.Windows.Forms.Padding(2);
             this.RawMaterials.Name = "RawMaterials";
-            this.RawMaterials.Padding = new System.Windows.Forms.Padding(3);
-            this.RawMaterials.Size = new System.Drawing.Size(1463, 771);
+            this.RawMaterials.Padding = new System.Windows.Forms.Padding(2);
+            this.RawMaterials.Size = new System.Drawing.Size(1096, 620);
             this.RawMaterials.TabIndex = 1;
             this.RawMaterials.Text = "Raw Materials";
             this.RawMaterials.UseVisualStyleBackColor = true;
@@ -579,13 +594,14 @@
             this.MaterialReceivedDate});
             this.dgvRawMaterialsShow.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvRawMaterialsShow.GridColor = System.Drawing.Color.DimGray;
-            this.dgvRawMaterialsShow.Location = new System.Drawing.Point(396, 58);
+            this.dgvRawMaterialsShow.Location = new System.Drawing.Point(297, 47);
+            this.dgvRawMaterialsShow.Margin = new System.Windows.Forms.Padding(2);
             this.dgvRawMaterialsShow.Name = "dgvRawMaterialsShow";
             this.dgvRawMaterialsShow.ReadOnly = true;
             this.dgvRawMaterialsShow.RowHeadersWidth = 51;
             this.dgvRawMaterialsShow.RowTemplate.Height = 24;
             this.dgvRawMaterialsShow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRawMaterialsShow.Size = new System.Drawing.Size(1064, 710);
+            this.dgvRawMaterialsShow.Size = new System.Drawing.Size(797, 577);
             this.dgvRawMaterialsShow.TabIndex = 2;
             this.dgvRawMaterialsShow.DoubleClick += new System.EventHandler(this.dgvRawMaterialsShow_DoubleClick);
             // 
@@ -646,9 +662,10 @@
             // pnlRawMaterialsShow
             // 
             this.pnlRawMaterialsShow.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlRawMaterialsShow.Location = new System.Drawing.Point(396, 105);
+            this.pnlRawMaterialsShow.Location = new System.Drawing.Point(297, 79);
+            this.pnlRawMaterialsShow.Margin = new System.Windows.Forms.Padding(2);
             this.pnlRawMaterialsShow.Name = "pnlRawMaterialsShow";
-            this.pnlRawMaterialsShow.Size = new System.Drawing.Size(1064, 663);
+            this.pnlRawMaterialsShow.Size = new System.Drawing.Size(797, 539);
             this.pnlRawMaterialsShow.TabIndex = 3;
             // 
             // pnlAdminRawMaterial
@@ -656,9 +673,10 @@
             this.pnlAdminRawMaterial.BackColor = System.Drawing.Color.White;
             this.pnlAdminRawMaterial.Controls.Add(this.txtSearchRawMaterial);
             this.pnlAdminRawMaterial.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlAdminRawMaterial.Location = new System.Drawing.Point(396, 3);
+            this.pnlAdminRawMaterial.Location = new System.Drawing.Point(297, 2);
+            this.pnlAdminRawMaterial.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAdminRawMaterial.Name = "pnlAdminRawMaterial";
-            this.pnlAdminRawMaterial.Size = new System.Drawing.Size(1064, 55);
+            this.pnlAdminRawMaterial.Size = new System.Drawing.Size(797, 45);
             this.pnlAdminRawMaterial.TabIndex = 2;
             // 
             // txtSearchRawMaterial
@@ -668,11 +686,12 @@
             this.txtSearchRawMaterial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtSearchRawMaterial.Depth = 0;
             this.txtSearchRawMaterial.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSearchRawMaterial.Font = new System.Drawing.Font("Oswald", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchRawMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchRawMaterial.HideSelection = true;
             this.txtSearchRawMaterial.Hint = "Search raw materials by category name";
             this.txtSearchRawMaterial.LeadingIcon = ((System.Drawing.Image)(resources.GetObject("txtSearchRawMaterial.LeadingIcon")));
             this.txtSearchRawMaterial.Location = new System.Drawing.Point(0, 0);
+            this.txtSearchRawMaterial.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearchRawMaterial.MaxLength = 32767;
             this.txtSearchRawMaterial.MouseState = MaterialSkin.MouseState.OUT;
             this.txtSearchRawMaterial.Name = "txtSearchRawMaterial";
@@ -684,7 +703,7 @@
             this.txtSearchRawMaterial.SelectionLength = 0;
             this.txtSearchRawMaterial.SelectionStart = 0;
             this.txtSearchRawMaterial.ShortcutsEnabled = true;
-            this.txtSearchRawMaterial.Size = new System.Drawing.Size(1064, 48);
+            this.txtSearchRawMaterial.Size = new System.Drawing.Size(797, 48);
             this.txtSearchRawMaterial.TabIndex = 23;
             this.txtSearchRawMaterial.TabStop = false;
             this.txtSearchRawMaterial.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -695,6 +714,7 @@
             // pnlRawMaterialInput
             // 
             this.pnlRawMaterialInput.BackColor = System.Drawing.Color.Snow;
+            this.pnlRawMaterialInput.Controls.Add(this.btnSendEmail);
             this.pnlRawMaterialInput.Controls.Add(this.btnPrintRawMaterialInvoice);
             this.pnlRawMaterialInput.Controls.Add(this.btnDeleteRawMaterial);
             this.pnlRawMaterialInput.Controls.Add(this.txtRawMaterialsId);
@@ -707,11 +727,33 @@
             this.pnlRawMaterialInput.Controls.Add(this.cmbRawMaterialsCategoryInput);
             this.pnlRawMaterialInput.Controls.Add(this.lblRawMaterial);
             this.pnlRawMaterialInput.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlRawMaterialInput.Font = new System.Drawing.Font("Oswald", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlRawMaterialInput.Location = new System.Drawing.Point(3, 3);
+            this.pnlRawMaterialInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlRawMaterialInput.Location = new System.Drawing.Point(2, 2);
+            this.pnlRawMaterialInput.Margin = new System.Windows.Forms.Padding(2);
             this.pnlRawMaterialInput.Name = "pnlRawMaterialInput";
-            this.pnlRawMaterialInput.Size = new System.Drawing.Size(393, 765);
+            this.pnlRawMaterialInput.Size = new System.Drawing.Size(295, 616);
             this.pnlRawMaterialInput.TabIndex = 1;
+            // 
+            // btnSendEmail
+            // 
+            this.btnSendEmail.AutoSize = false;
+            this.btnSendEmail.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSendEmail.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnSendEmail.Depth = 0;
+            this.btnSendEmail.HighEmphasis = true;
+            this.btnSendEmail.Icon = null;
+            this.btnSendEmail.Location = new System.Drawing.Point(158, 501);
+            this.btnSendEmail.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnSendEmail.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSendEmail.Name = "btnSendEmail";
+            this.btnSendEmail.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnSendEmail.Size = new System.Drawing.Size(62, 29);
+            this.btnSendEmail.TabIndex = 25;
+            this.btnSendEmail.Text = "Email";
+            this.btnSendEmail.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnSendEmail.UseAccentColor = false;
+            this.btnSendEmail.UseVisualStyleBackColor = true;
+            this.btnSendEmail.Click += new System.EventHandler(this.btnSendEmail_Click);
             // 
             // btnPrintRawMaterialInvoice
             // 
@@ -721,12 +763,12 @@
             this.btnPrintRawMaterialInvoice.Depth = 0;
             this.btnPrintRawMaterialInvoice.HighEmphasis = true;
             this.btnPrintRawMaterialInvoice.Icon = null;
-            this.btnPrintRawMaterialInvoice.Location = new System.Drawing.Point(244, 516);
-            this.btnPrintRawMaterialInvoice.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnPrintRawMaterialInvoice.Location = new System.Drawing.Point(37, 501);
+            this.btnPrintRawMaterialInvoice.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnPrintRawMaterialInvoice.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnPrintRawMaterialInvoice.Name = "btnPrintRawMaterialInvoice";
             this.btnPrintRawMaterialInvoice.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnPrintRawMaterialInvoice.Size = new System.Drawing.Size(75, 36);
+            this.btnPrintRawMaterialInvoice.Size = new System.Drawing.Size(56, 29);
             this.btnPrintRawMaterialInvoice.TabIndex = 24;
             this.btnPrintRawMaterialInvoice.Text = "PRINT";
             this.btnPrintRawMaterialInvoice.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -742,12 +784,12 @@
             this.btnDeleteRawMaterial.Depth = 0;
             this.btnDeleteRawMaterial.HighEmphasis = true;
             this.btnDeleteRawMaterial.Icon = null;
-            this.btnDeleteRawMaterial.Location = new System.Drawing.Point(137, 516);
-            this.btnDeleteRawMaterial.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnDeleteRawMaterial.Location = new System.Drawing.Point(158, 419);
+            this.btnDeleteRawMaterial.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnDeleteRawMaterial.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDeleteRawMaterial.Name = "btnDeleteRawMaterial";
             this.btnDeleteRawMaterial.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnDeleteRawMaterial.Size = new System.Drawing.Size(83, 36);
+            this.btnDeleteRawMaterial.Size = new System.Drawing.Size(62, 29);
             this.btnDeleteRawMaterial.TabIndex = 23;
             this.btnDeleteRawMaterial.Text = "DELETE";
             this.btnDeleteRawMaterial.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -762,11 +804,12 @@
             this.txtRawMaterialsId.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtRawMaterialsId.Depth = 0;
             this.txtRawMaterialsId.Enabled = false;
-            this.txtRawMaterialsId.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtRawMaterialsId.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtRawMaterialsId.HideSelection = true;
             this.txtRawMaterialsId.Hint = "Automated Product Id";
             this.txtRawMaterialsId.LeadingIcon = null;
-            this.txtRawMaterialsId.Location = new System.Drawing.Point(49, 79);
+            this.txtRawMaterialsId.Location = new System.Drawing.Point(37, 64);
+            this.txtRawMaterialsId.Margin = new System.Windows.Forms.Padding(2);
             this.txtRawMaterialsId.MaxLength = 32767;
             this.txtRawMaterialsId.MouseState = MaterialSkin.MouseState.OUT;
             this.txtRawMaterialsId.Name = "txtRawMaterialsId";
@@ -778,7 +821,7 @@
             this.txtRawMaterialsId.SelectionLength = 0;
             this.txtRawMaterialsId.SelectionStart = 0;
             this.txtRawMaterialsId.ShortcutsEnabled = true;
-            this.txtRawMaterialsId.Size = new System.Drawing.Size(243, 48);
+            this.txtRawMaterialsId.Size = new System.Drawing.Size(182, 48);
             this.txtRawMaterialsId.TabIndex = 22;
             this.txtRawMaterialsId.TabStop = false;
             this.txtRawMaterialsId.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -791,11 +834,12 @@
             this.txtRawCostInput.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txtRawCostInput.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtRawCostInput.Depth = 0;
-            this.txtRawCostInput.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtRawCostInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtRawCostInput.HideSelection = true;
             this.txtRawCostInput.Hint = "Total Cost";
             this.txtRawCostInput.LeadingIcon = null;
-            this.txtRawCostInput.Location = new System.Drawing.Point(49, 354);
+            this.txtRawCostInput.Location = new System.Drawing.Point(37, 288);
+            this.txtRawCostInput.Margin = new System.Windows.Forms.Padding(2);
             this.txtRawCostInput.MaxLength = 32767;
             this.txtRawCostInput.MouseState = MaterialSkin.MouseState.OUT;
             this.txtRawCostInput.Name = "txtRawCostInput";
@@ -807,7 +851,7 @@
             this.txtRawCostInput.SelectionLength = 0;
             this.txtRawCostInput.SelectionStart = 0;
             this.txtRawCostInput.ShortcutsEnabled = true;
-            this.txtRawCostInput.Size = new System.Drawing.Size(243, 48);
+            this.txtRawCostInput.Size = new System.Drawing.Size(182, 48);
             this.txtRawCostInput.TabIndex = 2;
             this.txtRawCostInput.TabStop = false;
             this.txtRawCostInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -817,9 +861,10 @@
             // lblReceiveDate
             // 
             this.lblReceiveDate.AutoSize = true;
-            this.lblReceiveDate.Location = new System.Drawing.Point(47, 439);
+            this.lblReceiveDate.Location = new System.Drawing.Point(35, 357);
+            this.lblReceiveDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblReceiveDate.Name = "lblReceiveDate";
-            this.lblReceiveDate.Size = new System.Drawing.Size(93, 29);
+            this.lblReceiveDate.Size = new System.Drawing.Size(93, 17);
             this.lblReceiveDate.TabIndex = 15;
             this.lblReceiveDate.Text = "Receive Date";
             // 
@@ -827,9 +872,10 @@
             // 
             this.dtpRawMaterialReceiveDate.CustomFormat = "dd/MM/yyyy";
             this.dtpRawMaterialReceiveDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRawMaterialReceiveDate.Location = new System.Drawing.Point(173, 435);
+            this.dtpRawMaterialReceiveDate.Location = new System.Drawing.Point(130, 353);
+            this.dtpRawMaterialReceiveDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpRawMaterialReceiveDate.Name = "dtpRawMaterialReceiveDate";
-            this.dtpRawMaterialReceiveDate.Size = new System.Drawing.Size(164, 33);
+            this.dtpRawMaterialReceiveDate.Size = new System.Drawing.Size(124, 23);
             this.dtpRawMaterialReceiveDate.TabIndex = 18;
             // 
             // btnSaveRawMaterials
@@ -840,12 +886,12 @@
             this.btnSaveRawMaterials.Depth = 0;
             this.btnSaveRawMaterials.HighEmphasis = true;
             this.btnSaveRawMaterials.Icon = null;
-            this.btnSaveRawMaterials.Location = new System.Drawing.Point(49, 516);
-            this.btnSaveRawMaterials.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSaveRawMaterials.Location = new System.Drawing.Point(38, 419);
+            this.btnSaveRawMaterials.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnSaveRawMaterials.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSaveRawMaterials.Name = "btnSaveRawMaterials";
             this.btnSaveRawMaterials.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnSaveRawMaterials.Size = new System.Drawing.Size(64, 36);
+            this.btnSaveRawMaterials.Size = new System.Drawing.Size(55, 29);
             this.btnSaveRawMaterials.TabIndex = 19;
             this.btnSaveRawMaterials.Text = "SAVE";
             this.btnSaveRawMaterials.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -859,11 +905,12 @@
             this.txtRawQuantityInput.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txtRawQuantityInput.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtRawQuantityInput.Depth = 0;
-            this.txtRawQuantityInput.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRawQuantityInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRawQuantityInput.HideSelection = true;
             this.txtRawQuantityInput.Hint = "Enter quantity";
             this.txtRawQuantityInput.LeadingIcon = null;
-            this.txtRawQuantityInput.Location = new System.Drawing.Point(49, 283);
+            this.txtRawQuantityInput.Location = new System.Drawing.Point(37, 230);
+            this.txtRawQuantityInput.Margin = new System.Windows.Forms.Padding(2);
             this.txtRawQuantityInput.MaxLength = 32767;
             this.txtRawQuantityInput.MouseState = MaterialSkin.MouseState.OUT;
             this.txtRawQuantityInput.Name = "txtRawQuantityInput";
@@ -875,7 +922,7 @@
             this.txtRawQuantityInput.SelectionLength = 0;
             this.txtRawQuantityInput.SelectionStart = 0;
             this.txtRawQuantityInput.ShortcutsEnabled = true;
-            this.txtRawQuantityInput.Size = new System.Drawing.Size(243, 48);
+            this.txtRawQuantityInput.Size = new System.Drawing.Size(182, 48);
             this.txtRawQuantityInput.TabIndex = 1;
             this.txtRawQuantityInput.TabStop = false;
             this.txtRawQuantityInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -891,7 +938,7 @@
             this.cmbRawProductNameInput.DropDownHeight = 174;
             this.cmbRawProductNameInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRawProductNameInput.DropDownWidth = 121;
-            this.cmbRawProductNameInput.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cmbRawProductNameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cmbRawProductNameInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cmbRawProductNameInput.FormattingEnabled = true;
             this.cmbRawProductNameInput.Hint = "Choose Product";
@@ -899,11 +946,12 @@
             this.cmbRawProductNameInput.ItemHeight = 43;
             this.cmbRawProductNameInput.Items.AddRange(new object[] {
             "None"});
-            this.cmbRawProductNameInput.Location = new System.Drawing.Point(49, 215);
+            this.cmbRawProductNameInput.Location = new System.Drawing.Point(37, 175);
+            this.cmbRawProductNameInput.Margin = new System.Windows.Forms.Padding(2);
             this.cmbRawProductNameInput.MaxDropDownItems = 4;
             this.cmbRawProductNameInput.MouseState = MaterialSkin.MouseState.OUT;
             this.cmbRawProductNameInput.Name = "cmbRawProductNameInput";
-            this.cmbRawProductNameInput.Size = new System.Drawing.Size(243, 49);
+            this.cmbRawProductNameInput.Size = new System.Drawing.Size(183, 49);
             this.cmbRawProductNameInput.StartIndex = 0;
             this.cmbRawProductNameInput.TabIndex = 3;
             // 
@@ -916,7 +964,7 @@
             this.cmbRawMaterialsCategoryInput.DropDownHeight = 432;
             this.cmbRawMaterialsCategoryInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRawMaterialsCategoryInput.DropDownWidth = 121;
-            this.cmbRawMaterialsCategoryInput.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cmbRawMaterialsCategoryInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cmbRawMaterialsCategoryInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.cmbRawMaterialsCategoryInput.FormattingEnabled = true;
             this.cmbRawMaterialsCategoryInput.Hint = "Choose Category";
@@ -924,11 +972,12 @@
             this.cmbRawMaterialsCategoryInput.ItemHeight = 43;
             this.cmbRawMaterialsCategoryInput.Items.AddRange(new object[] {
             "None"});
-            this.cmbRawMaterialsCategoryInput.Location = new System.Drawing.Point(49, 146);
+            this.cmbRawMaterialsCategoryInput.Location = new System.Drawing.Point(37, 119);
+            this.cmbRawMaterialsCategoryInput.Margin = new System.Windows.Forms.Padding(2);
             this.cmbRawMaterialsCategoryInput.MaxDropDownItems = 10;
             this.cmbRawMaterialsCategoryInput.MouseState = MaterialSkin.MouseState.OUT;
             this.cmbRawMaterialsCategoryInput.Name = "cmbRawMaterialsCategoryInput";
-            this.cmbRawMaterialsCategoryInput.Size = new System.Drawing.Size(243, 49);
+            this.cmbRawMaterialsCategoryInput.Size = new System.Drawing.Size(183, 49);
             this.cmbRawMaterialsCategoryInput.StartIndex = 0;
             this.cmbRawMaterialsCategoryInput.TabIndex = 0;
             this.cmbRawMaterialsCategoryInput.SelectionChangeCommitted += new System.EventHandler(this.cmbRawMaterialsCategoryInput_SelectionChangeCommitted);
@@ -936,10 +985,11 @@
             // lblRawMaterial
             // 
             this.lblRawMaterial.AutoSize = true;
-            this.lblRawMaterial.Font = new System.Drawing.Font("Oswald", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRawMaterial.Location = new System.Drawing.Point(131, 17);
+            this.lblRawMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRawMaterial.Location = new System.Drawing.Point(98, 14);
+            this.lblRawMaterial.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRawMaterial.Name = "lblRawMaterial";
-            this.lblRawMaterial.Size = new System.Drawing.Size(161, 35);
+            this.lblRawMaterial.Size = new System.Drawing.Size(152, 20);
             this.lblRawMaterial.TabIndex = 0;
             this.lblRawMaterial.Text = "Enter Raw Materials";
             // 
@@ -950,10 +1000,11 @@
             this.EmployeeAdd.Controls.Add(this.pnlEmployeeInput);
             this.EmployeeAdd.Controls.Add(this.pnlEmployeeShow);
             this.EmployeeAdd.ImageKey = "employee.png";
-            this.EmployeeAdd.Location = new System.Drawing.Point(4, 58);
+            this.EmployeeAdd.Location = new System.Drawing.Point(4, 53);
+            this.EmployeeAdd.Margin = new System.Windows.Forms.Padding(2);
             this.EmployeeAdd.Name = "EmployeeAdd";
-            this.EmployeeAdd.Padding = new System.Windows.Forms.Padding(3);
-            this.EmployeeAdd.Size = new System.Drawing.Size(1463, 771);
+            this.EmployeeAdd.Padding = new System.Windows.Forms.Padding(2);
+            this.EmployeeAdd.Size = new System.Drawing.Size(1096, 620);
             this.EmployeeAdd.TabIndex = 0;
             this.EmployeeAdd.Text = "Employee Add";
             this.EmployeeAdd.UseVisualStyleBackColor = true;
@@ -964,11 +1015,12 @@
             this.txtSearchEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txtSearchEmployee.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtSearchEmployee.Depth = 0;
-            this.txtSearchEmployee.Font = new System.Drawing.Font("Oswald", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchEmployee.HideSelection = true;
             this.txtSearchEmployee.Hint = "Search employee by name";
             this.txtSearchEmployee.LeadingIcon = ((System.Drawing.Image)(resources.GetObject("txtSearchEmployee.LeadingIcon")));
-            this.txtSearchEmployee.Location = new System.Drawing.Point(521, 0);
+            this.txtSearchEmployee.Location = new System.Drawing.Point(391, 0);
+            this.txtSearchEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearchEmployee.MaxLength = 32767;
             this.txtSearchEmployee.MouseState = MaterialSkin.MouseState.OUT;
             this.txtSearchEmployee.Name = "txtSearchEmployee";
@@ -980,7 +1032,7 @@
             this.txtSearchEmployee.SelectionLength = 0;
             this.txtSearchEmployee.SelectionStart = 0;
             this.txtSearchEmployee.ShortcutsEnabled = true;
-            this.txtSearchEmployee.Size = new System.Drawing.Size(946, 48);
+            this.txtSearchEmployee.Size = new System.Drawing.Size(710, 48);
             this.txtSearchEmployee.TabIndex = 3;
             this.txtSearchEmployee.TabStop = false;
             this.txtSearchEmployee.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1007,19 +1059,19 @@
             this.pnlEmployeeInput.Controls.Add(this.txtEmployeeName);
             this.pnlEmployeeInput.Controls.Add(this.txtEmployeeId);
             this.pnlEmployeeInput.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlEmployeeInput.Location = new System.Drawing.Point(3, 3);
-            this.pnlEmployeeInput.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlEmployeeInput.Location = new System.Drawing.Point(2, 2);
             this.pnlEmployeeInput.Name = "pnlEmployeeInput";
-            this.pnlEmployeeInput.Size = new System.Drawing.Size(518, 746);
+            this.pnlEmployeeInput.Size = new System.Drawing.Size(388, 607);
             this.pnlEmployeeInput.TabIndex = 5;
             // 
             // lblPasswordReset
             // 
-            this.lblPasswordReset.Font = new System.Drawing.Font("Oswald", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPasswordReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPasswordReset.ForeColor = System.Drawing.Color.Red;
-            this.lblPasswordReset.Location = new System.Drawing.Point(56, 47);
+            this.lblPasswordReset.Location = new System.Drawing.Point(42, 38);
+            this.lblPasswordReset.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPasswordReset.Name = "lblPasswordReset";
-            this.lblPasswordReset.Size = new System.Drawing.Size(425, 28);
+            this.lblPasswordReset.Size = new System.Drawing.Size(319, 23);
             this.lblPasswordReset.TabIndex = 6;
             this.lblPasswordReset.Text = "Please reset password of ";
             this.lblPasswordReset.Click += new System.EventHandler(this.lblPasswordReset_Click);
@@ -1032,12 +1084,12 @@
             this.btnLogOutAdmin.Depth = 0;
             this.btnLogOutAdmin.HighEmphasis = true;
             this.btnLogOutAdmin.Icon = null;
-            this.btnLogOutAdmin.Location = new System.Drawing.Point(246, 658);
-            this.btnLogOutAdmin.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnLogOutAdmin.Location = new System.Drawing.Point(184, 535);
+            this.btnLogOutAdmin.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnLogOutAdmin.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnLogOutAdmin.Name = "btnLogOutAdmin";
             this.btnLogOutAdmin.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnLogOutAdmin.Size = new System.Drawing.Size(130, 36);
+            this.btnLogOutAdmin.Size = new System.Drawing.Size(98, 29);
             this.btnLogOutAdmin.TabIndex = 23;
             this.btnLogOutAdmin.Text = "LOG OUT";
             this.btnLogOutAdmin.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -1049,14 +1101,14 @@
             // 
             this.switchThemeChangeEmployee.BackColor = System.Drawing.Color.Transparent;
             this.switchThemeChangeEmployee.Depth = 0;
-            this.switchThemeChangeEmployee.Font = new System.Drawing.Font("Oswald", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.switchThemeChangeEmployee.Location = new System.Drawing.Point(43, 709);
+            this.switchThemeChangeEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.switchThemeChangeEmployee.Location = new System.Drawing.Point(32, 576);
             this.switchThemeChangeEmployee.Margin = new System.Windows.Forms.Padding(0);
             this.switchThemeChangeEmployee.MouseLocation = new System.Drawing.Point(-1, -1);
             this.switchThemeChangeEmployee.MouseState = MaterialSkin.MouseState.HOVER;
             this.switchThemeChangeEmployee.Name = "switchThemeChangeEmployee";
             this.switchThemeChangeEmployee.Ripple = true;
-            this.switchThemeChangeEmployee.Size = new System.Drawing.Size(234, 47);
+            this.switchThemeChangeEmployee.Size = new System.Drawing.Size(176, 38);
             this.switchThemeChangeEmployee.TabIndex = 22;
             this.switchThemeChangeEmployee.Text = "Dark Mode";
             this.switchThemeChangeEmployee.UseVisualStyleBackColor = false;
@@ -1070,12 +1122,12 @@
             this.btnDeleteEmployeeInfo.Depth = 0;
             this.btnDeleteEmployeeInfo.HighEmphasis = true;
             this.btnDeleteEmployeeInfo.Icon = null;
-            this.btnDeleteEmployeeInfo.Location = new System.Drawing.Point(147, 658);
-            this.btnDeleteEmployeeInfo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnDeleteEmployeeInfo.Location = new System.Drawing.Point(110, 535);
+            this.btnDeleteEmployeeInfo.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnDeleteEmployeeInfo.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDeleteEmployeeInfo.Name = "btnDeleteEmployeeInfo";
             this.btnDeleteEmployeeInfo.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnDeleteEmployeeInfo.Size = new System.Drawing.Size(79, 36);
+            this.btnDeleteEmployeeInfo.Size = new System.Drawing.Size(59, 29);
             this.btnDeleteEmployeeInfo.TabIndex = 10;
             this.btnDeleteEmployeeInfo.Text = "DELETE";
             this.btnDeleteEmployeeInfo.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -1091,12 +1143,12 @@
             this.btnSaveEmployeeInfo.Depth = 0;
             this.btnSaveEmployeeInfo.HighEmphasis = true;
             this.btnSaveEmployeeInfo.Icon = null;
-            this.btnSaveEmployeeInfo.Location = new System.Drawing.Point(53, 658);
-            this.btnSaveEmployeeInfo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSaveEmployeeInfo.Location = new System.Drawing.Point(40, 535);
+            this.btnSaveEmployeeInfo.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnSaveEmployeeInfo.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSaveEmployeeInfo.Name = "btnSaveEmployeeInfo";
             this.btnSaveEmployeeInfo.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnSaveEmployeeInfo.Size = new System.Drawing.Size(75, 36);
+            this.btnSaveEmployeeInfo.Size = new System.Drawing.Size(56, 29);
             this.btnSaveEmployeeInfo.TabIndex = 9;
             this.btnSaveEmployeeInfo.Text = "SAVE";
             this.btnSaveEmployeeInfo.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -1107,9 +1159,10 @@
             // lblEmployeeInput
             // 
             this.lblEmployeeInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmployeeInput.Location = new System.Drawing.Point(121, 11);
+            this.lblEmployeeInput.Location = new System.Drawing.Point(91, 9);
+            this.lblEmployeeInput.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmployeeInput.Name = "lblEmployeeInput";
-            this.lblEmployeeInput.Size = new System.Drawing.Size(306, 48);
+            this.lblEmployeeInput.Size = new System.Drawing.Size(230, 39);
             this.lblEmployeeInput.TabIndex = 8;
             this.lblEmployeeInput.Text = "Employee Information Input";
             // 
@@ -1118,17 +1171,19 @@
             this.pnlEmployeeGender.Controls.Add(this.lblEmployeeGender);
             this.pnlEmployeeGender.Controls.Add(this.rdbEmployeeFemale);
             this.pnlEmployeeGender.Controls.Add(this.rdbEmployeeMale);
-            this.pnlEmployeeGender.Location = new System.Drawing.Point(53, 573);
+            this.pnlEmployeeGender.Location = new System.Drawing.Point(40, 466);
+            this.pnlEmployeeGender.Margin = new System.Windows.Forms.Padding(2);
             this.pnlEmployeeGender.Name = "pnlEmployeeGender";
-            this.pnlEmployeeGender.Size = new System.Drawing.Size(425, 66);
+            this.pnlEmployeeGender.Size = new System.Drawing.Size(319, 54);
             this.pnlEmployeeGender.TabIndex = 7;
             // 
             // lblEmployeeGender
             // 
-            this.lblEmployeeGender.Font = new System.Drawing.Font("Oswald", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmployeeGender.Location = new System.Drawing.Point(2, 26);
+            this.lblEmployeeGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmployeeGender.Location = new System.Drawing.Point(2, 21);
+            this.lblEmployeeGender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmployeeGender.Name = "lblEmployeeGender";
-            this.lblEmployeeGender.Size = new System.Drawing.Size(78, 33);
+            this.lblEmployeeGender.Size = new System.Drawing.Size(58, 27);
             this.lblEmployeeGender.TabIndex = 8;
             this.lblEmployeeGender.Text = "Gender";
             // 
@@ -1136,7 +1191,7 @@
             // 
             this.rdbEmployeeFemale.AutoSize = true;
             this.rdbEmployeeFemale.Depth = 0;
-            this.rdbEmployeeFemale.Location = new System.Drawing.Point(104, 13);
+            this.rdbEmployeeFemale.Location = new System.Drawing.Point(78, 11);
             this.rdbEmployeeFemale.Margin = new System.Windows.Forms.Padding(0);
             this.rdbEmployeeFemale.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rdbEmployeeFemale.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1153,7 +1208,7 @@
             // 
             this.rdbEmployeeMale.AutoSize = true;
             this.rdbEmployeeMale.Depth = 0;
-            this.rdbEmployeeMale.Location = new System.Drawing.Point(218, 13);
+            this.rdbEmployeeMale.Location = new System.Drawing.Point(164, 11);
             this.rdbEmployeeMale.Margin = new System.Windows.Forms.Padding(0);
             this.rdbEmployeeMale.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rdbEmployeeMale.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1176,7 +1231,7 @@
             this.cmbEmployeeRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEmployeeRole.DropDownWidth = 121;
             this.cmbEmployeeRole.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbEmployeeRole.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cmbEmployeeRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cmbEmployeeRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cmbEmployeeRole.FormattingEnabled = true;
             this.cmbEmployeeRole.Hint = "Choose Employee Role";
@@ -1185,11 +1240,12 @@
             this.cmbEmployeeRole.Items.AddRange(new object[] {
             "Admin",
             "Manager"});
-            this.cmbEmployeeRole.Location = new System.Drawing.Point(53, 506);
+            this.cmbEmployeeRole.Location = new System.Drawing.Point(40, 411);
+            this.cmbEmployeeRole.Margin = new System.Windows.Forms.Padding(2);
             this.cmbEmployeeRole.MaxDropDownItems = 4;
             this.cmbEmployeeRole.MouseState = MaterialSkin.MouseState.OUT;
             this.cmbEmployeeRole.Name = "cmbEmployeeRole";
-            this.cmbEmployeeRole.Size = new System.Drawing.Size(425, 49);
+            this.cmbEmployeeRole.Size = new System.Drawing.Size(320, 49);
             this.cmbEmployeeRole.Sorted = true;
             this.cmbEmployeeRole.StartIndex = 0;
             this.cmbEmployeeRole.TabIndex = 6;
@@ -1200,11 +1256,12 @@
             this.txtEmployeeAddress.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txtEmployeeAddress.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtEmployeeAddress.Depth = 0;
-            this.txtEmployeeAddress.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtEmployeeAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtEmployeeAddress.HideSelection = true;
             this.txtEmployeeAddress.Hint = "Enter Employee Address";
             this.txtEmployeeAddress.LeadingIcon = null;
-            this.txtEmployeeAddress.Location = new System.Drawing.Point(56, 430);
+            this.txtEmployeeAddress.Location = new System.Drawing.Point(42, 349);
+            this.txtEmployeeAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmployeeAddress.MaxLength = 32767;
             this.txtEmployeeAddress.MouseState = MaterialSkin.MouseState.OUT;
             this.txtEmployeeAddress.Name = "txtEmployeeAddress";
@@ -1216,7 +1273,7 @@
             this.txtEmployeeAddress.SelectionLength = 0;
             this.txtEmployeeAddress.SelectionStart = 0;
             this.txtEmployeeAddress.ShortcutsEnabled = true;
-            this.txtEmployeeAddress.Size = new System.Drawing.Size(425, 48);
+            this.txtEmployeeAddress.Size = new System.Drawing.Size(319, 48);
             this.txtEmployeeAddress.TabIndex = 5;
             this.txtEmployeeAddress.TabStop = false;
             this.txtEmployeeAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1225,21 +1282,23 @@
             // 
             // lblJoiningDate
             // 
-            this.lblJoiningDate.Font = new System.Drawing.Font("Oswald", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJoiningDate.Location = new System.Drawing.Point(52, 367);
+            this.lblJoiningDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJoiningDate.Location = new System.Drawing.Point(39, 298);
+            this.lblJoiningDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblJoiningDate.Name = "lblJoiningDate";
-            this.lblJoiningDate.Size = new System.Drawing.Size(122, 33);
+            this.lblJoiningDate.Size = new System.Drawing.Size(92, 27);
             this.lblJoiningDate.TabIndex = 5;
             this.lblJoiningDate.Text = "Joining Date";
             // 
             // dtpJoiningDate
             // 
             this.dtpJoiningDate.CustomFormat = "dd/MM/yyyy";
-            this.dtpJoiningDate.Font = new System.Drawing.Font("Oswald", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpJoiningDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpJoiningDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpJoiningDate.Location = new System.Drawing.Point(180, 364);
+            this.dtpJoiningDate.Location = new System.Drawing.Point(135, 296);
+            this.dtpJoiningDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpJoiningDate.Name = "dtpJoiningDate";
-            this.dtpJoiningDate.Size = new System.Drawing.Size(298, 33);
+            this.dtpJoiningDate.Size = new System.Drawing.Size(224, 23);
             this.dtpJoiningDate.TabIndex = 4;
             this.dtpJoiningDate.Value = new System.DateTime(2023, 8, 11, 0, 0, 0, 0);
             // 
@@ -1249,11 +1308,12 @@
             this.txtEmployeeSalary.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txtEmployeeSalary.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtEmployeeSalary.Depth = 0;
-            this.txtEmployeeSalary.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtEmployeeSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtEmployeeSalary.HideSelection = true;
             this.txtEmployeeSalary.Hint = "Enter Employee Salary";
             this.txtEmployeeSalary.LeadingIcon = null;
-            this.txtEmployeeSalary.Location = new System.Drawing.Point(53, 285);
+            this.txtEmployeeSalary.Location = new System.Drawing.Point(40, 232);
+            this.txtEmployeeSalary.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmployeeSalary.MaxLength = 32767;
             this.txtEmployeeSalary.MouseState = MaterialSkin.MouseState.OUT;
             this.txtEmployeeSalary.Name = "txtEmployeeSalary";
@@ -1265,7 +1325,7 @@
             this.txtEmployeeSalary.SelectionLength = 0;
             this.txtEmployeeSalary.SelectionStart = 0;
             this.txtEmployeeSalary.ShortcutsEnabled = true;
-            this.txtEmployeeSalary.Size = new System.Drawing.Size(425, 48);
+            this.txtEmployeeSalary.Size = new System.Drawing.Size(319, 48);
             this.txtEmployeeSalary.TabIndex = 3;
             this.txtEmployeeSalary.TabStop = false;
             this.txtEmployeeSalary.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1278,11 +1338,12 @@
             this.txtEmployeePassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txtEmployeePassword.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtEmployeePassword.Depth = 0;
-            this.txtEmployeePassword.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtEmployeePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtEmployeePassword.HideSelection = true;
             this.txtEmployeePassword.Hint = "Enter Employee Password";
             this.txtEmployeePassword.LeadingIcon = null;
-            this.txtEmployeePassword.Location = new System.Drawing.Point(53, 214);
+            this.txtEmployeePassword.Location = new System.Drawing.Point(40, 174);
+            this.txtEmployeePassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmployeePassword.MaxLength = 32767;
             this.txtEmployeePassword.MouseState = MaterialSkin.MouseState.OUT;
             this.txtEmployeePassword.Name = "txtEmployeePassword";
@@ -1294,7 +1355,7 @@
             this.txtEmployeePassword.SelectionLength = 0;
             this.txtEmployeePassword.SelectionStart = 0;
             this.txtEmployeePassword.ShortcutsEnabled = true;
-            this.txtEmployeePassword.Size = new System.Drawing.Size(425, 48);
+            this.txtEmployeePassword.Size = new System.Drawing.Size(319, 48);
             this.txtEmployeePassword.TabIndex = 2;
             this.txtEmployeePassword.TabStop = false;
             this.txtEmployeePassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1307,11 +1368,12 @@
             this.txtEmployeeName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txtEmployeeName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtEmployeeName.Depth = 0;
-            this.txtEmployeeName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtEmployeeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtEmployeeName.HideSelection = true;
             this.txtEmployeeName.Hint = "Enter Employee Name";
             this.txtEmployeeName.LeadingIcon = null;
-            this.txtEmployeeName.Location = new System.Drawing.Point(53, 147);
+            this.txtEmployeeName.Location = new System.Drawing.Point(40, 119);
+            this.txtEmployeeName.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmployeeName.MaxLength = 32767;
             this.txtEmployeeName.MouseState = MaterialSkin.MouseState.OUT;
             this.txtEmployeeName.Name = "txtEmployeeName";
@@ -1323,7 +1385,7 @@
             this.txtEmployeeName.SelectionLength = 0;
             this.txtEmployeeName.SelectionStart = 0;
             this.txtEmployeeName.ShortcutsEnabled = true;
-            this.txtEmployeeName.Size = new System.Drawing.Size(425, 48);
+            this.txtEmployeeName.Size = new System.Drawing.Size(319, 48);
             this.txtEmployeeName.TabIndex = 1;
             this.txtEmployeeName.TabStop = false;
             this.txtEmployeeName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1337,12 +1399,12 @@
             this.txtEmployeeId.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtEmployeeId.Depth = 0;
             this.txtEmployeeId.Enabled = false;
-            this.txtEmployeeId.Font = new System.Drawing.Font("Roboto", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmployeeId.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmployeeId.HideSelection = true;
             this.txtEmployeeId.Hint = "Automated Employee Id";
             this.txtEmployeeId.LeadingIcon = null;
-            this.txtEmployeeId.Location = new System.Drawing.Point(56, 80);
-            this.txtEmployeeId.Margin = new System.Windows.Forms.Padding(5);
+            this.txtEmployeeId.Location = new System.Drawing.Point(42, 65);
+            this.txtEmployeeId.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmployeeId.MaxLength = 32767;
             this.txtEmployeeId.MouseState = MaterialSkin.MouseState.OUT;
             this.txtEmployeeId.Name = "txtEmployeeId";
@@ -1354,7 +1416,7 @@
             this.txtEmployeeId.SelectionLength = 0;
             this.txtEmployeeId.SelectionStart = 0;
             this.txtEmployeeId.ShortcutsEnabled = true;
-            this.txtEmployeeId.Size = new System.Drawing.Size(425, 48);
+            this.txtEmployeeId.Size = new System.Drawing.Size(319, 48);
             this.txtEmployeeId.TabIndex = 0;
             this.txtEmployeeId.TabStop = false;
             this.txtEmployeeId.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1364,9 +1426,10 @@
             // pnlEmployeeShow
             // 
             this.pnlEmployeeShow.Controls.Add(this.dgvEmployeeInformationShow);
-            this.pnlEmployeeShow.Location = new System.Drawing.Point(522, 4);
+            this.pnlEmployeeShow.Location = new System.Drawing.Point(392, 3);
+            this.pnlEmployeeShow.Margin = new System.Windows.Forms.Padding(2);
             this.pnlEmployeeShow.Name = "pnlEmployeeShow";
-            this.pnlEmployeeShow.Size = new System.Drawing.Size(941, 748);
+            this.pnlEmployeeShow.Size = new System.Drawing.Size(706, 608);
             this.pnlEmployeeShow.TabIndex = 0;
             // 
             // dgvEmployeeInformationShow
@@ -1387,13 +1450,14 @@
             this.Admin_Id});
             this.dgvEmployeeInformationShow.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvEmployeeInformationShow.GridColor = System.Drawing.SystemColors.ButtonShadow;
-            this.dgvEmployeeInformationShow.Location = new System.Drawing.Point(0, 46);
+            this.dgvEmployeeInformationShow.Location = new System.Drawing.Point(0, 38);
+            this.dgvEmployeeInformationShow.Margin = new System.Windows.Forms.Padding(2);
             this.dgvEmployeeInformationShow.Name = "dgvEmployeeInformationShow";
             this.dgvEmployeeInformationShow.ReadOnly = true;
             this.dgvEmployeeInformationShow.RowHeadersWidth = 51;
             this.dgvEmployeeInformationShow.RowTemplate.Height = 24;
             this.dgvEmployeeInformationShow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmployeeInformationShow.Size = new System.Drawing.Size(941, 702);
+            this.dgvEmployeeInformationShow.Size = new System.Drawing.Size(706, 570);
             this.dgvEmployeeInformationShow.TabIndex = 0;
             this.dgvEmployeeInformationShow.DoubleClick += new System.EventHandler(this.dgvEmployeeInformationShow_DoubleClick_1);
             // 
@@ -1485,26 +1549,29 @@
             this.tabEmployeeInformation.Controls.Add(this.FinishedProduct);
             this.tabEmployeeInformation.Depth = 0;
             this.tabEmployeeInformation.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabEmployeeInformation.Font = new System.Drawing.Font("Oswald", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabEmployeeInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabEmployeeInformation.ImageList = this.imageList1;
-            this.tabEmployeeInformation.Location = new System.Drawing.Point(3, 64);
+            this.tabEmployeeInformation.Location = new System.Drawing.Point(2, 52);
+            this.tabEmployeeInformation.Margin = new System.Windows.Forms.Padding(2);
             this.tabEmployeeInformation.MouseState = MaterialSkin.MouseState.HOVER;
             this.tabEmployeeInformation.Multiline = true;
             this.tabEmployeeInformation.Name = "tabEmployeeInformation";
             this.tabEmployeeInformation.Padding = new System.Drawing.Point(10, 10);
             this.tabEmployeeInformation.SelectedIndex = 0;
-            this.tabEmployeeInformation.Size = new System.Drawing.Size(1471, 833);
+            this.tabEmployeeInformation.Size = new System.Drawing.Size(1104, 677);
             this.tabEmployeeInformation.TabIndex = 0;
             // 
             // FormAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1477, 900);
+            this.ClientSize = new System.Drawing.Size(1108, 731);
             this.Controls.Add(this.tabEmployeeInformation);
             this.DrawerTabControl = this.tabEmployeeInformation;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FormAdmin";
+            this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome Admin ";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormAdmin_FormClosed);
@@ -1613,5 +1680,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn M_Gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn Admin_Id;
         private MaterialSkin.Controls.MaterialTabControl tabEmployeeInformation;
+        private MaterialSkin.Controls.MaterialButton btnSendEmail;
     }
 }

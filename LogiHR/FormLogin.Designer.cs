@@ -1,4 +1,4 @@
-﻿namespace GarmentsManagementSystem
+﻿namespace LogiHR
 {
     partial class FormLogin
     {

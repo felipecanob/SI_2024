@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SlnRecursosHumanosAlmacen.FormAdmin">
+    <Position X="8" Y="2.5" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>XaUSgBgQO7xBVNEvIJWgrgDiy4KVRYIY+oUHokXK28o=</HashCode>
+      <FileName>FormAdmin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SlnRecursosHumanosAlmacen.FormLogin">
+    <Position X="12.5" Y="2.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAKABAIAICAAAEAAVACAAAQCAIAAAAAAAAAAAIQAAEE=</HashCode>
+      <FileName>FormLogin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SlnRecursosHumanosAlmacen.FormWarehouseManager">
+    <Position X="5.75" Y="2.25" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>UCQSQIgQI6DBVBEpIISACqAygQsVUooC2gEHgEUIWcA=</HashCode>
+      <FileName>FormWarehouseManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SlnRecursosHumanosAlmacen.DataAccess" Collapsed="true">
+    <Position X="8.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAEAAAAAUAAAAAAAAIAEAACABAAAAg=</HashCode>
+      <FileName>DataAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaterialSkin.Controls.MaterialForm" Collapsed="true">
+    <Position X="13" Y="1.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="MaterialSkin.Controls.MaterialForm.FormStyles" Collapsed="true">
+        <TypeIdentifier />
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
