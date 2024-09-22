@@ -1,31 +1,6 @@
-<h1>Garments Warehouse Management System</h1>
-<h3>Overview</h3>
-<p>This project is a Garments Warehouse Management System developed using C# in Visual Studio. The system has two user roles - Admin and Manager. Admins and Managers can perform CRUD operations, edit warehouse materials, and manage the database. Admins have the additional capability to print invoices for items. The system distinguishes between two types of items: Raw Materials and Finished Products, with the latter being produced by the garments.</p>
-
-<h3>Features</h3>
-<h6>User Roles:</h6>
-<p>1. Admin: CRUD operations, edit warehouse materials, print invoices.</p>
-<p>2. Manager: CRUD operations, edit database.</p>
-
-<h3>Item Types:</h3>
-<p>Raw Materials: Inventory items used in the garment production process.</p>
-<p>Finished Products: End products produced by the garments.</p>
-
-<h3>Database:</h3>
-<p>MS SQL Server is used for the database.</p>
-
-
-<h3>Usage</h3>
-<h6>Clone the Repository:</h6>
-<p>git clone https://github.com/your-username/garments-warehouse-management.git</p>
-
-<h3>Set Up Database:</h3>
-<p>Create a new MS SQL Server database and configure the connection string in the project.</p>
-
-<h3>Run the Application:</h3>
-<p>1. Open the project in Visual Studio.</p>
-<p>2. Build and run the application.</p>
-
-
-<h3>Dependencies</h3>
-<p>Ensure you have Visual Studio installed to run and modify the project.</p>
+<h1>LogiHR - Human Resource Management System</h1> <h3>Overview</h3> <p>LogiHR is a Human Resource Management System developed using C# in Visual Studio. The system is designed to facilitate the management of employee records, authentication, and warehouse-related operations within a company. 
+  
+  
+  LogiHR includes two key user roles – Admin and Warehouse Manager – each with specific permissions and functions. Admins can handle employee management, while Warehouse Managers oversee the inventory. The system enables efficient employee data management, authentication, and inventory control.</p> <h3>Features</h3> <h6>User Roles:</h6> <p>1. 
+  
+  Admin: Manages employee records (create, update, delete), sets roles and salary, and has access to the full HR functionalities.</p> <p>2. Warehouse Manager: Manages inventory items, including raw materials and finished products, with full CRUD capabilities.</p> <h3>Key Functionalities:</h3> <h6>Employee Management (Admin):</h6> <p>Admins can add, update, and delete employee information such as name, contact details, salary, and role within the company.</p> <h6>Inventory Management (Warehouse Manager):</h6> <p>Warehouse Managers can create, read, update, and delete inventory items, track quantities, costs, and categories of both raw materials and finished products.</p> <h6>User Authentication:</h6> <p>Login functionality with role-based access control. Admins and Warehouse Managers have separate interfaces.</p> <h3>Database</h3> <p>MS SQL Server is used to store employee and inventory data, ensuring secure and real-time updates to the system.</p> <h3>Usage</h3>. Create a new MS SQL Server database.</p> <p>2. Configure the connection string in the project settings to link with your SQL Server database.</p> <h3>Run the Application:</h3> <p>1. Open the project in Visual Studio.</p> <p>2. Build the solution and run the application.</p> <h3>Dependencies</h3> <p>Ensure you have Visual Studio installed to run and modify the project. The project uses MS SQL Server for database management.</p>
