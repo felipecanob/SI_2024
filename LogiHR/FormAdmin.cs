@@ -14,6 +14,7 @@ using System.Xml;
 using System.Drawing.Printing;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
+using Outlook = Microsoft.Office.Interop.Outlook;
 
 namespace LogiHR
 {
@@ -804,7 +805,32 @@ namespace LogiHR
 
         private void btnSendEmail_Click(object sender, EventArgs e)
         {
+            try
+            {
+                dynamic outlookApp = Activator.CreateInstance(Type.GetTypeFromProgID("Outlook.Application"));
+                Outlook.MailItem mailItem = (Outlook.MailItem)outlookApp.CreateItem(Outlook.OlItemType.olMailItem);
 
+                // Set email properties
+                // mailItem.Subject = Subject_T;
+                mailItem.Attachments.Add(printFinishedDocument, Outlook.OlAttachmentType.olByValue, Type.Missing, Type.Missing);
+                mailItem.Body = "This invoice was generated with LogiHR";
+                mailItem.To = "logitics@warehouse.com ";
+                //mailItem.To = MainEmail;
+                mailItem.CC = "logitics@warehouse.com ";
+
+                // Send the email
+                mailItem.Send();
+
+                // Clean up resources
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(mailItem);
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(outlookApp);
+            }
+            catch (Exception ex)
+            {
+
+                
+            }
+            
         }
     }
 
