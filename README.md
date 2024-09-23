@@ -1,3 +1,5 @@
+<h1> In the folder Documents the relevant information like: feseability study, RASD LogiHR, Requirements, Use Cases, Can be found.
+
 <h1>LogiHR - Human Resource Management System</h1> <h3>Overview</h3> <p>LogiHR is a Human Resource Management System developed using C# in Visual Studio. The system is designed to facilitate the management of employee records, authentication, and warehouse-related operations within a company. 
   
   
