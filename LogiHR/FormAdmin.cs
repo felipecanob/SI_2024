@@ -16,6 +16,8 @@ using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Net.Mail;
 using System.IO;
+using System.Xml;
+
 namespace LogiHR
 {
     public partial class FormAdmin : MaterialForm
@@ -26,12 +28,24 @@ namespace LogiHR
 
         readonly MaterialSkin.MaterialSkinManager materialSkinManager;
         private FormLogin Fl { get; set; }
- 
+
+
+        public class EmailConfig
+        {
+            public string FromEmail { get; set; }
+            public string SmtpServer { get; set; }
+            public int SmtpPort { get; set; }
+            public string SmtpUser { get; set; }
+            public string SmtpPassword { get; set; }
+            public string ToEmail { get; set; }
+        }
+        private EmailConfig emailConfig;
         public FormAdmin()
         {
             
             // Initializing materialskin
             InitializeComponent();
+            LoadEmailConfig();
             this.Da = new DataAccess();
             this.PopulateEmployeeGridView();
             PopulateGridViewRawMeterials();
@@ -802,7 +816,35 @@ namespace LogiHR
             e.HasMorePages = false;
             countFinished++;
         }
+        private void LoadEmailConfig()
+        {
+            try
+            {
+                emailConfig = new EmailConfig();
 
+                // Load the XML file
+                XmlDocument xmlDoc = new XmlDocument();
+                string exeDirectory = AppDomain.CurrentDomain.BaseDirectory;
+                string xmlFilePath = Path.Combine(exeDirectory, "Config.xml");
+                xmlDoc.Load(xmlFilePath);
+
+                // Parse the XML and populate the emailConfig object
+                XmlNode emailSettings = xmlDoc.SelectSingleNode("configuration/emailSettings");
+
+                emailConfig.FromEmail = emailSettings["fromEmail"].InnerText;
+                emailConfig.SmtpServer = emailSettings["smtpServer"].InnerText;
+                emailConfig.SmtpPort = int.Parse(emailSettings["smtpPort"].InnerText);
+                emailConfig.SmtpUser = emailSettings["smtpUser"].InnerText;
+                emailConfig.SmtpPassword = emailSettings["smtpPassword"].InnerText;
+                emailConfig.ToEmail = emailSettings["toEmail"].InnerText;
+
+                MessageBox.Show("Email configuration loaded successfully.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading email configuration: " + ex.Message);
+            }
+        }
         private void btnSendEmail_Click(object sender, EventArgs e)
         {
             // Create a bitmap to simulate drawing on the printer page
@@ -838,9 +880,9 @@ namespace LogiHR
             try
             {
                 MailMessage mail = new MailMessage();
-                SmtpClient SmtpServer = new SmtpClient("your_smtp_server");
-                mail.From = new MailAddress("your_email@example.com");
-                mail.To.Add("logistics@warehouse.com");
+                SmtpClient SmtpServer = new SmtpClient(emailConfig.SmtpServer);
+                mail.From = new MailAddress(emailConfig.FromEmail);
+                mail.To.Add(emailConfig.ToEmail);
                 mail.Subject = "Invoice LogiHR";
                 mail.Body = "Please find attached the invoice for the finished product.";
 
@@ -849,8 +891,8 @@ namespace LogiHR
                 mail.Attachments.Add(attachment);
 
                 // SMTP server configuration
-                SmtpServer.Port = 587; // Update to your SMTP server's port
-                SmtpServer.Credentials = new System.Net.NetworkCredential("your_email@example.com", "your_password");
+                SmtpServer.Port = emailConfig.SmtpPort;
+                SmtpServer.Credentials = new System.Net.NetworkCredential(emailConfig.SmtpUser, emailConfig.SmtpPassword);
                 SmtpServer.EnableSsl = true;
 
                 // Send the email
