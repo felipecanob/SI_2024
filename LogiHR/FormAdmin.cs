@@ -14,8 +14,8 @@ using System.Xml;
 using System.Drawing.Printing;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
-using Outlook = Microsoft.Office.Interop.Outlook;
-
+using System.Net.Mail;
+using System.IO;
 namespace LogiHR
 {
     public partial class FormAdmin : MaterialForm
@@ -805,32 +805,62 @@ namespace LogiHR
 
         private void btnSendEmail_Click(object sender, EventArgs e)
         {
+            // Create a bitmap to simulate drawing on the printer page
+            int width = 600;
+            int height = 800;
+            Bitmap bmp = new Bitmap(width, height);
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                // Draw the same content that you would draw in the print document
+                g.Clear(Color.White); // White background
+
+                // Simulate the same drawing as in the print document
+                g.DrawString("Wizard Fashion", new Font("Arial", 25, FontStyle.Bold), Brushes.DimGray, new Point(230));
+                g.DrawString("Bill Id: " + billFinishedId + countFinished, new Font("Arial", 15, FontStyle.Bold), Brushes.Blue, new Point(100, 70));
+                g.DrawString("Product Id: " + dgvFinishedProductShow.SelectedRows[0].Cells[0].Value.ToString(), new Font("Arial", 15, FontStyle.Bold), Brushes.Blue, new Point(100, 100));
+                g.DrawString("Category Name: " + dgvFinishedProductShow.SelectedRows[0].Cells[1].Value.ToString(), new Font("Arial", 15, FontStyle.Bold), Brushes.Blue, new Point(100, 130));
+                g.DrawString("Product Name: " + dgvFinishedProductShow.SelectedRows[0].Cells[2].Value.ToString(), new Font("Arial", 15, FontStyle.Bold), Brushes.Blue, new Point(100, 160));
+                g.DrawString("Quantity: " + dgvFinishedProductShow.SelectedRows[0].Cells[3].Value.ToString(), new Font("Arial", 15, FontStyle.Bold), Brushes.Blue, new Point(100, 190));
+                g.DrawString("Total Cost: " + dgvFinishedProductShow.SelectedRows[0].Cells[4].Value.ToString(), new Font("Arial", 15, FontStyle.Bold), Brushes.Blue, new Point(100, 220));
+                g.DrawString("Wizard Fashion", new Font("Arial", 25, FontStyle.Bold), Brushes.DimGray, new Point(230, 400));
+            }
+
+            // Save the Bitmap to a file (for example, as a PNG)
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "FinishedProductInvoice.png");
+            bmp.Save(filePath, System.Drawing.Imaging.ImageFormat.Png);
+
+            // Send the email with the saved image attached
+            SendEmailWithAttachment(filePath);
+
+        }
+        private void SendEmailWithAttachment(string filePath)
+        {
             try
             {
-                dynamic outlookApp = Activator.CreateInstance(Type.GetTypeFromProgID("Outlook.Application"));
-                Outlook.MailItem mailItem = (Outlook.MailItem)outlookApp.CreateItem(Outlook.OlItemType.olMailItem);
+                MailMessage mail = new MailMessage();
+                SmtpClient SmtpServer = new SmtpClient("your_smtp_server");
+                mail.From = new MailAddress("your_email@example.com");
+                mail.To.Add("logistics@warehouse.com");
+                mail.Subject = "Invoice LogiHR";
+                mail.Body = "Please find attached the invoice for the finished product.";
 
-                // Set email properties
-                // mailItem.Subject = Subject_T;
-                mailItem.Attachments.Add(printFinishedDocument, Outlook.OlAttachmentType.olByValue, Type.Missing, Type.Missing);
-                mailItem.Body = "This invoice was generated with LogiHR";
-                mailItem.To = "logitics@warehouse.com ";
-                //mailItem.To = MainEmail;
-                mailItem.CC = "logitics@warehouse.com ";
+                // Attach the saved document (PNG image)
+                Attachment attachment = new Attachment(filePath);
+                mail.Attachments.Add(attachment);
+
+                // SMTP server configuration
+                SmtpServer.Port = 587; // Update to your SMTP server's port
+                SmtpServer.Credentials = new System.Net.NetworkCredential("your_email@example.com", "your_password");
+                SmtpServer.EnableSsl = true;
 
                 // Send the email
-                mailItem.Send();
-
-                // Clean up resources
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(mailItem);
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(outlookApp);
+                SmtpServer.Send(mail);
+                MessageBox.Show("Invoice email sent successfully.");
             }
             catch (Exception ex)
             {
-
-                
+                MessageBox.Show("Error sending email: " + ex.Message);
             }
-            
         }
     }
 
