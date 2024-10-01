@@ -15,5 +15,5 @@
 <h3>User Instruction:</h3> 
 <p>To execute the program open the file **Config.xml**, in this file put your local mail information, this information is required to send the mails, if it is not correct the program will anyway execute but will not send the mails correctly.
 Then open the file **DbConfig.xml** and fill the information with your local Database. Please remember that the database should have the following extracted</p>
-![Alt text](./Images/DB_Diagram.png)
+<p>![Alt text](./Images/DB_Diagram.png)</p>
 <p>Then double click the **.exe** file and execute the program</p>
