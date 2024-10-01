@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <database>
+    <dataSource>FELIPE-PC\T</dataSource>
+    <initialCatalog>Test</initialCatalog>
+    <persistSecurityInfo>true</persistSecurityInfo>
+    <integratedSecurity>true</integratedSecurity>
+    <userID>FELIPE-PC\felip</userID>
+    <password>YourPassword</password> <!-- Add if Integrated Security is false -->
+  </database>
+</configuration>
