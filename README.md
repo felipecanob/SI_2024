@@ -13,7 +13,7 @@
 <h6>/FinalEXE</h6> <p>The executable program is here and the configuration files too </p>
 
 <h3>User Instruction:</h3> 
-<p>To execute the program open the file **Config.xml**, in this file put your local mail information, this information is required to send the mails, if it is not correct the program will anyway execute but will not send the mails correctly.
-Then open the file **DbConfig.xml** and fill the information with your local Database. Please remember that the database should have the following extracted</p>
-
-<p>Then double click the .exe file and execute the program</p>
+<p>To execute the program open the file <strong>Config.xml</strong>, in this file put your local mail information, this information is required to send the mails. If it is not correct, the program will still execute, but will not send the mails correctly.</p>
+<p>Then open the file <strong>DbConfig.xml</strong> and fill the information with your local Database. Please remember that the database should have the following structure</p>
+<img src="./images/DB_Diagram.png" alt="Database Configuration" width="500">
+<p>Then double click the .exe file and execute the program.</p>
