@@ -16,7 +16,6 @@ using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Net.Mail;
 using System.IO;
-using System.Xml;
 
 namespace LogiHR
 {
@@ -902,6 +901,50 @@ namespace LogiHR
             catch (Exception ex)
             {
                 MessageBox.Show("Error sending email: " + ex.Message);
+            }
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            // Open a SaveFileDialog to choose where to save the CSV file
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "CSV files (*.csv)|*.csv";
+            saveFileDialog.Title = "Save Selected Rows to CSV";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Get the file path from the SaveFileDialog
+                string filePath = saveFileDialog.FileName;
+
+                try
+                {
+                    // Collect the selected rows from the DataGridView
+                    List<DataGridViewRow> selectedRows = dgvEmployeeInformationShow.SelectedRows.Cast<DataGridViewRow>().ToList();
+
+                    // Write the selected rows to the CSV file
+                    using (StreamWriter sw = new StreamWriter(filePath))
+                    {
+                        // Write the header row
+                        string header = string.Join(",", dgvEmployeeInformationShow.Columns.Cast<DataGridViewColumn>().Select(column => column.HeaderText));
+                        sw.WriteLine(header);
+
+                        // Write each selected row's data
+                        foreach (DataGridViewRow row in selectedRows)
+                        {
+                            if (!row.IsNewRow)
+                            {
+                                var cells = row.Cells.Cast<DataGridViewCell>().Select(cell => cell.Value?.ToString() ?? string.Empty);
+                                sw.WriteLine(string.Join(",", cells));
+                            }
+                        }
+                    }
+
+                    MessageBox.Show("Selected rows successfully saved to CSV!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred while saving the CSV file: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

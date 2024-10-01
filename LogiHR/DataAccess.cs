@@ -5,6 +5,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Xml;
 
 namespace LogiHR
 {
@@ -42,8 +44,46 @@ namespace LogiHR
 
         public DataAccess()
         {
-            this.Sqlcon = new SqlConnection(@"Data Source=FELIPE-PC\T;Initial Catalog=Test;Persist Security Info=True;User ID=FELIPE-PC\felip;Integrated Security=True");
+            string connectionString = GetConnectionStringFromXml();
+            this.Sqlcon = new SqlConnection(connectionString);
+            //this.Sqlcon = new SqlConnection(@"Data Source=FELIPE-PC\T;Initial Catalog=Test;Persist Security Info=True;User ID=FELIPE-PC\felip;Integrated Security=True");
             Sqlcon.Open();
+        }
+
+        // Load connection string from XML file
+        private string GetConnectionStringFromXml()
+        {
+            string exeDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string xmlFilePath = Path.Combine(exeDirectory, "DbConfig.xml");
+
+            if (!File.Exists(xmlFilePath))
+            {
+                throw new FileNotFoundException("Database configuration file not found: " + xmlFilePath);
+            }
+
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load(xmlFilePath);
+
+            // Get the XML node values
+            XmlNode databaseNode = xmlDoc.SelectSingleNode("configuration/database");
+            string dataSource = databaseNode["dataSource"].InnerText;
+            string initialCatalog = databaseNode["initialCatalog"].InnerText;
+            string integratedSecurity = databaseNode["integratedSecurity"].InnerText;
+            string userID = databaseNode["userID"]?.InnerText;
+            string password = databaseNode["password"]?.InnerText;
+
+            // Build the connection string
+            string connectionString;
+            if (integratedSecurity.ToLower() == "true")
+            {
+                connectionString = $"Data Source={dataSource};Initial Catalog={initialCatalog};Integrated Security=True;";
+            }
+            else
+            {
+                connectionString = $"Data Source={dataSource};Initial Catalog={initialCatalog};User ID={userID};Password={password};";
+            }
+
+            return connectionString;
         }
 
         private void QueryText(string query)
