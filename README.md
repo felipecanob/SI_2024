@@ -15,5 +15,5 @@
 <h3>User Instruction:</h3> 
 <p>To execute the program open the file <strong>Config.xml</strong>, in this file put your local mail information, this information is required to send the mails. If it is not correct, the program will still execute, but will not send the mails correctly.</p>
 <p>Then open the file <strong>DbConfig.xml</strong> and fill the information with your local Database. Please remember that the database should have the following structure</p>
-<img src="./images/DB_Diagram.png" alt="Database Configuration" width="500">
-<p>Then double click the .exe file and execute the program.</p>
+<img src="./Images/DB_Diagram.png" alt="Database Configuration" width="500">
+<p>Then double click the <strong>LogiHR.exe</strong> file and execute the program.</p>
