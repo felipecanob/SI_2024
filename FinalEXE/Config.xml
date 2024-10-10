@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
     <emailSettings>
-        <fromEmail>your_email@example.com</fromEmail>
-        <smtpServer>smtp.example.com</smtpServer>
+        <fromEmail>f.cano701b.p@gmail.com</fromEmail>
+        <smtpServer>smtp.gmail.com</smtpServer>
         <smtpPort>587</smtpPort>
-        <smtpUser>your_email@example.com</smtpUser>
-        <smtpPassword>your_password</smtpPassword>
-        <toEmail>logistics@warehouse.com</toEmail>
+        <smtpUser>f.cano701b.p@gmail.com</smtpUser>
+        <smtpPassword>ijzr iqcp xyhn gnuy</smtpPassword>
+        <toEmail>felipec90b@gmail.com</toEmail>
     </emailSettings>
 </configuration>
