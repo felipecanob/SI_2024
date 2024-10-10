@@ -874,6 +874,36 @@ namespace LogiHR
             SendEmailWithAttachment(filePath);
 
         }
+        private void btnSendEmail_Click2(object sender, EventArgs e)
+        {
+            // Create a bitmap to simulate drawing on the printer page
+            int width = 600;
+            int height = 800;
+            Bitmap bmp = new Bitmap(width, height);
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                // Draw the same content that you would draw in the print document
+                g.Clear(Color.White); // White background
+
+                // Simulate the same drawing as in the print document
+                g.DrawString("Wizard Fashion", new Font("Arial", 25, FontStyle.Bold), Brushes.DimGray, new Point(230));
+                g.DrawString("Bill Id: " + billFinishedId + countFinished, new Font("Arial", 15, FontStyle.Bold), Brushes.Blue, new Point(100, 70));
+                g.DrawString("Product Id: " + dgvRawMaterialsShow.SelectedRows[0].Cells[0].Value.ToString(), new Font("Arial", 15, FontStyle.Bold), Brushes.Blue, new Point(100, 100));
+                g.DrawString("Category Name: " + dgvRawMaterialsShow.SelectedRows[0].Cells[1].Value.ToString(), new Font("Arial", 15, FontStyle.Bold), Brushes.Blue, new Point(100, 130));
+                g.DrawString("Product Name: " + dgvRawMaterialsShow.SelectedRows[0].Cells[2].Value.ToString(), new Font("Arial", 15, FontStyle.Bold), Brushes.Blue, new Point(100, 160));
+                g.DrawString("Quantity: " + dgvRawMaterialsShow.SelectedRows[0].Cells[3].Value.ToString(), new Font("Arial", 15, FontStyle.Bold), Brushes.Blue, new Point(100, 190));
+                g.DrawString("Total Cost: " + dgvRawMaterialsShow.SelectedRows[0].Cells[4].Value.ToString(), new Font("Arial", 15, FontStyle.Bold), Brushes.Blue, new Point(100, 220));
+                g.DrawString("Wizard Fashion", new Font("Arial", 25, FontStyle.Bold), Brushes.DimGray, new Point(230, 400));
+            }
+
+            // Save the Bitmap to a file (for example, as a PNG)
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "FinishedProductInvoice.png");
+            bmp.Save(filePath, System.Drawing.Imaging.ImageFormat.Png);
+
+            // Send the email with the saved image attached
+            SendEmailWithAttachment(filePath);
+
+        }
         private void SendEmailWithAttachment(string filePath)
         {
             try
@@ -919,13 +949,57 @@ namespace LogiHR
                 try
                 {
                     // Collect the selected rows from the DataGridView
-                    List<DataGridViewRow> selectedRows = dgvEmployeeInformationShow.SelectedRows.Cast<DataGridViewRow>().ToList();
+                    List<DataGridViewRow> selectedRows = dgvRawMaterialsShow.SelectedRows.Cast<DataGridViewRow>().ToList();
 
                     // Write the selected rows to the CSV file
                     using (StreamWriter sw = new StreamWriter(filePath))
                     {
                         // Write the header row
-                        string header = string.Join(",", dgvEmployeeInformationShow.Columns.Cast<DataGridViewColumn>().Select(column => column.HeaderText));
+                        string header = string.Join(",", dgvRawMaterialsShow.Columns.Cast<DataGridViewColumn>().Select(column => column.HeaderText));
+                        sw.WriteLine(header);
+
+                        // Write each selected row's data
+                        foreach (DataGridViewRow row in selectedRows)
+                        {
+                            if (!row.IsNewRow)
+                            {
+                                var cells = row.Cells.Cast<DataGridViewCell>().Select(cell => cell.Value?.ToString() ?? string.Empty);
+                                sw.WriteLine(string.Join(",", cells));
+                            }
+                        }
+                    }
+
+                    MessageBox.Show("Selected rows successfully saved to CSV!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred while saving the CSV file: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void materialButton1_Click2(object sender, EventArgs e)
+        {
+            // Open a SaveFileDialog to choose where to save the CSV file
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "CSV files (*.csv)|*.csv";
+            saveFileDialog.Title = "Save Selected Rows to CSV";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Get the file path from the SaveFileDialog
+                string filePath = saveFileDialog.FileName;
+
+                try
+                {
+                    // Collect the selected rows from the DataGridView
+                    List<DataGridViewRow> selectedRows = dgvFinishedProductShow.SelectedRows.Cast<DataGridViewRow>().ToList();
+
+                    // Write the selected rows to the CSV file
+                    using (StreamWriter sw = new StreamWriter(filePath))
+                    {
+                        // Write the header row
+                        string header = string.Join(",", dgvFinishedProductShow.Columns.Cast<DataGridViewColumn>().Select(column => column.HeaderText));
                         sw.WriteLine(header);
 
                         // Write each selected row's data

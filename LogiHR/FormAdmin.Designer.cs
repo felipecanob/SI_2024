@@ -349,7 +349,7 @@
             this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton2.UseAccentColor = false;
             this.materialButton2.UseVisualStyleBackColor = true;
-            this.materialButton2.Click += new System.EventHandler(this.materialButton1_Click);
+            this.materialButton2.Click += new System.EventHandler(this.materialButton1_Click2);
             // 
             // materialButton3
             // 
@@ -822,7 +822,7 @@
             this.btnSendEmail.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnSendEmail.UseAccentColor = false;
             this.btnSendEmail.UseVisualStyleBackColor = true;
-            this.btnSendEmail.Click += new System.EventHandler(this.btnSendEmail_Click);
+            this.btnSendEmail.Click += new System.EventHandler(this.btnSendEmail_Click2);
             // 
             // btnPrintRawMaterialInvoice
             // 
